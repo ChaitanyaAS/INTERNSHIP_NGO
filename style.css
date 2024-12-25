@@ -35,35 +35,34 @@ nav ul li a {
     font-weight: bold;
 }
 
-
-
 /* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align content to the left */
     background-size: cover;
     background-position: center;
     height: 100vh;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
+    text-align: left;
+    padding: 100px 20px; /* Adjust padding as needed */
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-size: 100px;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    font-size: 50px;
 }
 
 .buttons {
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -160,5 +159,3 @@ a.donate {
     color: #555;
     margin: 10px 0;
 }
-
-
