@@ -40,25 +40,23 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align content to the left */
+    align-items: flex-start;
     background-size: cover;
     background-position: center;
     height: 100vh;
     color: white;
     text-align: left;
-    padding: 100px 20px; /* Adjust padding as needed */
+    padding: 100px 20px;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    font-size: 100px;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    font-size: 50px;
 }
 
 .buttons {
@@ -91,71 +89,48 @@ a.donate {
     text-align: center;
 }
 
-.about-us h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+/* Social Media Section */
+.social-media {
+    padding: 30px 20px;
+    background: #f4f4f4;
+    text-align: center;
 }
 
-.about-us p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Vision and Mission Section */
-.vision-mission {
+.social-icons {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px 20px;
-    background: #f9f9f9;
-    gap: 20px;
-    text-align: center;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-.vision-mission div {
-    max-width: 400px;
-    flex: 1;
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: transform 0.3s;
 }
 
-.vision-mission img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.social-icons .icon:hover {
+    transform: scale(1.2);
 }
 
-.vision-mission h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 10px;
+.instagram {
+    background-image: url('./icons/instagram.png');
 }
 
-.vision-mission p {
-    font-size: 1rem;
-    color: #555;
+.twitter {
+    background-image: url('./icons/twitter.png');
 }
 
-/* Contact Section */
-.contact {
-    padding: 50px 20px;
-    background: #ffe082;
-    text-align: center;
+.facebook {
+    background-image: url('./icons/facebook.png');
 }
 
-.contact h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+.pinterest {
+    background-image: url('./icons/pinterest.png');
 }
 
-.contact-info p {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 10px 0;
+.youtube {
+    background-image: url('./icons/youtube.png');
 }
