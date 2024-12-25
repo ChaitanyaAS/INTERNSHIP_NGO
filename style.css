@@ -35,9 +35,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a.donate {
-    color: orange;
-}
+
 
 /* Hero Section */
 .hero {
@@ -83,6 +81,31 @@ nav ul li a.donate {
     background: darkorange;
 }
 
+a.donate {
+    color: orange;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* Vision and Mission Section */
 .vision-mission {
     display: flex;
@@ -119,22 +142,23 @@ nav ul li a.donate {
     color: #555;
 }
 
-.about-us {
+/* Contact Section */
+.contact {
     padding: 50px 20px;
-    background: ;
+    background: #ffe082;
     text-align: center;
 }
 
-.about-us h2 {
+.contact h2 {
     font-size: 2rem;
-    color:darkslategrey;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.about-us p {
-    font-size: 1.1rem;
-    color: darkslategrey;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
+.contact-info p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
 }
+
+
