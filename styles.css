@@ -30,31 +30,51 @@ nav ul {
 }
 
 /* Base Navigation Link Styles */
+/* Base Navigation Link Styles */
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     position: relative;
-    padding: 10px 0; /* Remove side padding to avoid a box effect */
-    transition: background 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+    padding: 10px 0; /* No box effect */
+    transition: color 0.3s ease; /* Smooth text color transition */
 }
 
-/* Hover Effect */
+/* Hover Effect (Bottom-to-Top Line) */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Line starts from the bottom */
+    height: 2px; /* Line thickness */
+    background: orange; /* Line color */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: right; /* Animation direction */
+    transition: transform 0.3s ease; /* Smooth line animation */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Expand line on hover */
+    transform-origin: left; /* Animation direction */
+}
+
 nav ul li a:hover {
-    background: linear-gradient(to right, orange, orange) no-repeat;
-    background-size: 100% 2px; /* Underline effect */
-    background-position: 0 100%; /* Position the underline below the text */
-    color: #000;
+    color: #000; /* Optional: Darker text color on hover */
 }
 
-/* Highlighted Event Link */
+/* Highlighted "Events" Link */
 nav ul li a.highlighted {
-    background: linear-gradient(to right, orange, orange) no-repeat;
-    background-size: 100% 2px; /* Underline effect */
-    background-position: 0 100%; /* Position the underline below the text */
-    color: orange; /* Text color */
+    background-color: orange; /* Orange box */
+    color: white; /* White text */
+    padding: 10px 15px; /* Add box padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
 }
 
+nav ul li a.highlighted:hover::after {
+    transform: none; /* Disable line animation for Events */
+}
 
 
 /* Hero Section */
