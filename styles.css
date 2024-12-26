@@ -243,6 +243,44 @@ nav ul li a.highlighted:hover::after {
     color: #ffcc00;
 }
 
+/* Social Media Section */
+.social-media {
+    padding: 50px;
+    background: rgb(255, 255, 255); /* Background color */
+    text-align: center; /* Center align heading and icons */
+    color: white;
+}
+
+.social-media h2 {
+    font-size: 2.5rem; /* Larger font size for heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center align icons */
+    gap: 20px; /* Space between icons */
+    flex-wrap: wrap; /* Wrap icons on smaller screens */
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px; /* Fixed width for icons */
+    height: 50px; /* Fixed height for icons */
+    border-radius: 50%; /* Optional: Make icons circular */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+.social-icons a img {
+    width: 100%; /* Ensure image fits the container */
+    height: 100%; /* Ensure image fits the container */
+    object-fit: cover; /* Maintain aspect ratio and cover entire space */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
