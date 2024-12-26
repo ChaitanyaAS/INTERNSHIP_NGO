@@ -29,30 +29,32 @@ nav ul {
     gap: 20px;
 }
 
-/* Navigation Link Styles */
-/* Navigation Link Styles */
+/* Base Navigation Link Styles */
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     position: relative;
-    padding: 10px 15px; /* Add padding to increase clickable area */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
-    border-radius: 5px; /* Rounded edges for the highlight area */
+    padding: 10px 0; /* Remove side padding to avoid a box effect */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth hover transition */
 }
 
-/* Highlight effect on hover */
+/* Hover Effect */
 nav ul li a:hover {
-    background-color: orange; /* Highlight color */
-    color: white; /* Change text color on hover */
+    background: linear-gradient(to right, orange, orange) no-repeat;
+    background-size: 100% 2px; /* Underline effect */
+    background-position: 0 100%; /* Position the underline below the text */
+    color: #000;
 }
 
-/* Always highlighted for Events */
+/* Highlighted Event Link */
 nav ul li a.highlighted {
-    background-color: orange; /* Highlight color for Events */
-    color: white; /* Text color for highlighted Events link */
-    border-radius: 5px;
+    background: linear-gradient(to right, orange, orange) no-repeat;
+    background-size: 100% 2px; /* Underline effect */
+    background-position: 0 100%; /* Position the underline below the text */
+    color: orange; /* Text color */
 }
+
 
 
 /* Hero Section */
