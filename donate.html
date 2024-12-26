@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="donate_styles.css">
+</head>
+<body>
+
+    <section class="hero" style="background-image: url('donationbackground.jpg');">
+        <div class="form-section">
+            <form class="donation-form" id="donationForm">
+                <div class="input-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{10}" required>
+                </div>
+                <input type="email" name="email" placeholder="Email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
