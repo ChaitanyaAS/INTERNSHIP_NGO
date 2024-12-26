@@ -1,3 +1,13 @@
+// Simple fade-in effect for About Us section
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutUs = document.querySelector('.about-us');
+    aboutUs.style.opacity = '0';
+    aboutUs.style.transition = 'opacity 1s ease-in-out';
+    setTimeout(() => {
+        aboutUs.style.opacity = '1';
+    }, 300);
+});
+
 // Fade-in effect for sections
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.vision-mission div, .hero');
@@ -8,14 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
             section.style.opacity = '1';
         }, 500 + index * 300);
     });
-});
-
-// Simple fade-in effect for About Us section
-document.addEventListener('DOMContentLoaded', () => {
-    const aboutUs = document.querySelector('.about-us');
-    aboutUs.style.opacity = '0';
-    aboutUs.style.transition = 'opacity 1s ease-in-out';
-    setTimeout(() => {
-        aboutUs.style.opacity = '1';
-    }, 300);
 });
