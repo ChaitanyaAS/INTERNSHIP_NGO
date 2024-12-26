@@ -200,26 +200,27 @@ nav ul li a.highlighted:hover::after {
 .contact-info {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    text-align: center; /* Center align text */
     padding: 50px;
     background: rgb(245, 176, 92); /* Background for the section */
     color: white; /* Default text color */
+    flex-direction: column; /* Stack content vertically */
 }
 
-/* Contact section link styles */
-.contact-info a {
-    text-decoration: none;
-    color: #FF5733; /* Link color */
+.contact-info h2 {
+    font-size: 2.5rem; /* Adjusted font size for heading */
+    margin-bottom: 20px;
+    color: white; /* Ensures consistent white color */
 }
 
-.contact-info a:hover {
-    color: #C70039; /* Hover color */
+.contact-info p {
+    font-size: 1.2rem; /* Adjusted font size for details */
+    line-height: 1.6; /* Better readability */
+    margin: 10px 0; /* Spacing between paragraphs */
+    color: white; /* Ensures consistent white color */
 }
 
-.contact-info a:visited {
-    color: #900C3F; /* Visited link color */
-}
 /* Social Media Section */
 .social-media {
     padding: 30px 20px;
