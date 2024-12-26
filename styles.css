@@ -242,7 +242,6 @@ nav ul li a.highlighted:hover::after {
 .contact-links a:hover {
     color: #ffcc00;
 }
-
 /* Social Media Section */
 .social-media {
     padding: 50px;
@@ -259,14 +258,14 @@ nav ul li a.highlighted:hover::after {
 .social-icons {
     display: flex;
     justify-content: center; /* Center align icons */
-    gap: 20px; /* Space between icons */
-    flex-wrap: wrap; /* Wrap icons on smaller screens */
+    gap: 10px; /* Smaller space between icons */
+    flex-wrap: nowrap; /* Keep icons in a single line */
 }
 
 .social-icons a {
     display: inline-block;
-    width: 50px; /* Fixed width for icons */
-    height: 50px; /* Fixed height for icons */
+    width: 30px; /* Smaller width for icons */
+    height: 30px; /* Smaller height for icons */
     border-radius: 50%; /* Optional: Make icons circular */
     overflow: hidden; /* Ensure image doesn't overflow */
     transition: transform 0.3s ease; /* Smooth hover animation */
@@ -281,6 +280,7 @@ nav ul li a.highlighted:hover::after {
 .social-icons a:hover {
     transform: scale(1.1); /* Slight zoom on hover */
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
