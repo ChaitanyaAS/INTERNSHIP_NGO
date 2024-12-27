@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pro {
+    background-color: grey;
+    color: aliceblue;
+    padding: 100px;
+}
+.pro h1{
+    color: white;
+    text-align: center;
+}
+.images{
+    size: 50px;
+}
+.elderlycare{
+    margin-top: 50px;
+    margin-left: 100px;
+}
