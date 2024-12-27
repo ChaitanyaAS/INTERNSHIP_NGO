@@ -3,19 +3,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("project_background.jpg") center center/cover no-repeat;
+}
+
 .pro {
     background-color: grey;
     color: aliceblue;
-    padding: 100px;
-}
-.pro h1{
-    color: white;
+    padding: 100px 30px;
     text-align: center;
 }
-.images{
-    size: 50px;
+
+.pro h1 {
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
-.elderlycare{
-    margin-top: 50px;
-    margin-left: 100px;
+
+.images {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping if images overflow */
+    justify-content: center; /* Centers the images */
+    gap: 20px; /* Adds space between images */
+    padding: 20px;
+}
+
+.project {
+    position: relative; /* Enables positioning for bottom text */
+    flex: 0 1 calc(33.33% - 40px); /* Ensures 3 items per row */
+    max-width: calc(33.33% - 40px); /* Maintains consistency */
+    text-align: center;
+    border: 15px solid orange; /* Adds an orange border */
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden; /* Ensures text stays within the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.project img {
+    width: 100%; /* Fully fit within its container */
+    height: 200px; /* Fixed height for equal size */
+    filter: brightness(0.7);
+    object-fit: cover; /* Ensures the image fits nicely without distortion */
+}
+
+.project .bottom-text {
+    position: absolute;
+    bottom: 5px; /* Moves text to the bottom */
+    left: 0;
+    width: 100%; /* Ensures the text spans the full width */
+    color: white; /* Text color */
+    font-size: 2rem; /* Adjust font size */
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
 }
