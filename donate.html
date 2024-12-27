@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="donate_styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <div class="background-overlay"></div>
+            <p class="overlay-text">"Your small contribution can bring big smiles!"</p>
+            <form class="donation-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="tel" name="mobile" placeholder="Mobile" pattern="[0-9]{10}" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="donation-item" required>
+                    <option value="" disabled selected>What do you want to donate?</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Books">Books</option>
+                    <option value="Toys">Toys</option>
+                    <option value="Money">Money</option>
+                </select>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
