@@ -12,17 +12,45 @@
         <p>"Be the change—unite to inspire hope, create impact, and shape a better tomorrow."</p>
     </div>
     <form>
-        <input type="text" name="name" placeholder="Name" required><br>
-        <input type="tel" name="mobile" placeholder="Mobile" pattern="[0-9]{10}" required><br>
-        <input type="email" name="email" placeholder="Email" required><br>
-        <textarea name="address" placeholder="Address" rows="4" required></textarea><br>
-        <input type="text" name="blood_group" placeholder="Blood Group" required><br>
-        <input type="date" name="date_of_birth" placeholder="Date of Birth" required><br>
-        <input type="text" name="profession" placeholder="Profession" required><br>
-        <input type="text" name="passion_hobbies" placeholder="Passion/Hobbies" required><br>
-        <p>Upload Your Photo:</p> <!-- Plain text, not functional -->
-        <input type="file" id="image-upload" name="image" accept="image/*" required><br>
-        <button type="submit">Join</button><br>
+        <p>Join us in creating a better future by filling this form!</p>
+        <br>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="blood_group">Blood Group:</label>
+            <input type="text" id="blood_group" name="blood_group" required>
+        </div>
+        <div class="form-group">
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
+        </div>
+        <div class="form-group">
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required>
+        </div>
+        <div class="form-group">
+            <label for="passion_hobbies">Passion/Hobbies:</label>
+            <input type="text" id="passion_hobbies" name="passion_hobbies" required>
+        </div>
+        <div class="form-group">
+            <label for="image-upload">Upload Your Photo:</label>
+            <input type="file" id="image-upload" name="image" accept="image/*" required>
+        </div>
+        <button type="submit">Join</button>
     </form>
 </body>
 </html>
