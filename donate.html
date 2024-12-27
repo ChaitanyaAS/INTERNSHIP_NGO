@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
-    <link rel="stylesheet" href="donate_styles.css">
+    <link rel="stylesheet" href="donate.css">
 </head>
 <body>
-    <div class="hero">
-        <!-- Clickable Logo Navigating to Index Page -->
-        <a href="index.html" class="logo">
-            <img src="Logo.png" alt="Logo">
-        </a>
-
-        <!-- Transparent Form Panel -->
+    <div class="container">
         <div class="form-section">
-            <form class="donation-form" id="donationForm">
-                <div class="input-row">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <input type="tel" name="phone" placeholder="Phone" pattern="[0-9]{10}" required>
+            <div class="background-overlay"></div>
+            <p class="overlay-text">"Your small contribution can bring big smiles!"</p>
+            <form class="donation-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="tel" name="mobile" placeholder="Mobile" pattern="[0-9]{10}" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <button type="submit">Submit</button>
+                <select name="donation-item" required>
+                    <option value="" disabled selected>What do you want to donate?</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Books">Books</option>
+                    <option value="Toys">Toys</option>
+                    <option value="Money">Money</option>
+                </select>
+                <button type="submit">Next</button>
             </form>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
