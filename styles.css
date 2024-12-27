@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Header Section */
+/* Header - Fixed and Transparent */
 header {
     display: flex;
     justify-content: flex-end;
@@ -18,8 +18,31 @@ header {
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     color: white;
     width: 100%;
-    position: fixed;
+    position: fixed; /* Makes the navigation bar stay on top while scrolling */
     top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+}
+nav ul {
+    display: none; /* Hide menu by default on mobile */
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
     z-index: 1000;
 }
 
@@ -31,47 +54,56 @@ nav ul {
     padding-right: 20px;
 }
 
+/* Base Navigation Link Styles */
 nav ul li a {
     text-decoration: none;
     color: #f5efef;
     font-weight: bold;
     position: relative;
-    padding: 10px 0;
-    transition: color 0.3s ease;
+    padding: 10px 0; /* No box effect */
+    transition: color 0.3s ease; /* Smooth text color transition */
 }
 
+/* Hover Effect (Bottom-to-Top Line) */
 nav ul li a::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: 2px;
-    background: orange;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
+    bottom: 0; /* Line starts from the bottom */
+    height: 2px; /* Line thickness */
+    background: orange; /* Line color */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: right; /* Animation direction */
+    transition: transform 0.3s ease; /* Smooth line animation */
 }
 
 nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+    transform: scaleX(1); /* Expand line on hover */
+    transform-origin: left; /* Animation direction */
 }
 
 nav ul li a:hover {
-    color: #f3ebeb;
+    color: #f3ebeb; /* Optional: Darker text color on hover */
 }
 
+/* Highlighted "Events" Link */
 nav ul li a.highlighted {
-    background-color: orange;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
+    background-color: orange; /* Orange box */
+    color: white; /* White text */
+    padding: 10px 15px; /* Add box padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
 }
 
 nav ul li a.highlighted:hover::after {
-    transform: none;
+    transform: none; /* Disable line animation for Events */
 }
+.hero {
+    height: 80vh; /* Relative to the viewport height */
+    padding: 5vw 2vw; /* Adjust padding relative to the viewport width */
+}
+
 
 /* Hero Section */
 .hero {
@@ -86,33 +118,19 @@ nav ul li a.highlighted:hover::after {
     text-align: left;
     padding: 100px 20px;
     position: relative;
-    filter: brightness(1.2);
+    filter: brightness(0.8);
 }
 
-.hero .logo img {
-    height: 150px;
-    position: absolute;
-    top: 70px;
-    left: 200px;
-    z-index: 500;
-    filter: brightness(1.2);
-}
-
-.hero p {
-    font-size: 2.8rem;
-    margin: 120px 10px 50px;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(85, 13, 13);
-    white-space: nowrap;
-}
-
+/* Hero Section Buttons */
 .hero .buttons {
     display: flex;
-    gap: 20px;
-    margin-left: 150px;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 1px; /* Adjust the gap between buttons as needed */
+    margin-left: 0; /* Remove or reduce left margin */
 }
 
-.hero .btn {
+/* Button Styles */
+.buttons .btn {
     text-decoration: none;
     background: orange;
     color: white;
@@ -122,7 +140,48 @@ nav ul li a.highlighted:hover::after {
     transition: background 0.3s, transform 0.2s;
 }
 
-.hero .btn:hover {
+.buttons .btn:hover {
+    background: darkorange;
+    transform: scale(1.1);
+}
+
+.logo img {
+    height: 150px; /* Adjust logo size */
+    position: absolute;
+    top: 70px; /* Move the logo below the navigation bar */
+    left: 200px; /* Adjust the position as needed */
+    z-index: 500; /* Ensure it stays above hero section content */
+    height: 30%;
+    filter: brightness(1);
+}
+
+.hero p {
+    font-size: 2.8rem;
+    margin-top: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(237, 231, 231);
+    margin-left: 10px;
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+}
+
+/* Button Styles */
+.buttons .btn {
+    margin-left: 150px;
+    text-decoration: none;
+    background: orange;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.buttons .btn:hover {
     background: darkorange;
     transform: scale(1.1);
 }
@@ -169,14 +228,13 @@ nav ul li a.highlighted:hover::after {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0.6;
-    filter: blur(2px);
-    transition: filter 0.3s, opacity 0.3s;
+    opacity: 0.6; /* Adjust transparency (0.0 = fully transparent, 1.0 = fully opaque) */
+    filter: blur(2px); /* Apply a blur effect (adjust the px value for stronger/weaker blur) */
+    transition: filter 0.3s, opacity 0.3s; /* Smooth transition for the effect */
 }
-
 .image-container img:hover {
-    filter: blur(0);
-    opacity: 1;
+    filter: blur(0); /* Remove blur on hover */
+    opacity: 1; /* Full opacity on hover */
 }
 
 .overlay {
@@ -190,7 +248,7 @@ nav ul li a.highlighted:hover::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -207,6 +265,7 @@ nav ul li a.highlighted:hover::after {
     line-height: 1.5;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
+
 
 /* Contact Section */
 .contact-info {
@@ -242,75 +301,119 @@ nav ul li a.highlighted:hover::after {
 .contact-links a:hover {
     color: #ffcc00;
 }
+
 /* Social Media Section */
 .social-media {
-    padding: 50px;
-    background: rgb(255, 255, 255); /* Background color */
-    text-align: center; /* Center align heading and icons */
-    color: white;
+    padding: 30px 20px;
+    background: #f4f4f4;
+    text-align: center;
+    background: rgb(245, 176, 92);
 }
 
-.social-media h2 {
-    font-size: 2.5rem; /* Larger font size for heading */
-    margin-bottom: 20px; /* Space below heading */
-}
 
 .social-icons {
     display: flex;
-    justify-content: center; /* Center align icons */
-    gap: 10px; /* Smaller space between icons */
-    flex-wrap: nowrap; /* Keep icons in a single line */
+    justify-content: center;
+    gap: 20px;
+    background: rgb(245, 176, 92);
 }
 
 .social-icons a {
     display: inline-block;
-    width: 30px; /* Smaller width for icons */
-    height: 30px; /* Smaller height for icons */
-    border-radius: 50%; /* Optional: Make icons circular */
-    overflow: hidden; /* Ensure image doesn't overflow */
-    transition: transform 0.3s ease; /* Smooth hover animation */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: rgb(245, 176, 92);
 }
 
-.social-icons a img {
-    width: 100%; /* Ensure image fits the container */
-    height: 100%; /* Ensure image fits the container */
-    object-fit: cover; /* Maintain aspect ratio and cover entire space */
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Optional: Makes the icons circular */
+    transition: transform 0.3s; /* Adds a hover effect */
+    background: rgb(245, 176, 92);
 }
 
-.social-icons a:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+.social-icons img:hover {
+    transform: scale(1.1); /* Slight hover effect */
 }
 
-/* Responsive Design */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 10px;
-    }
-
+    /* Hero Section Adjustments */
     .hero {
-        align-items: center;
+        height: 60vh;
+        padding: 50px 20px;
         text-align: center;
-        padding: 80px 20px;
     }
 
-    .hero .logo img {
-        left: auto;
-        right: auto;
+    .hero p {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    .hero .buttons {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .buttons .btn {
+        margin: 10px 0;
+    }
+
+    .logo img {
         top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .about-us, .vision-mission, .contact-info {
+    /* Navigation Adjustments */
+    nav ul {
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
         padding: 20px;
+        width: 250px;
     }
 
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .menu-toggle.active + nav ul {
+        display: flex;
+    }
+
+    /* Vision and Mission Section */
     .vision-mission {
         flex-direction: column;
-        gap: 30px;
+        padding: 20px;
     }
 
     .image-container {
         width: 100%;
         height: auto;
     }
+
+    .contact-info {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
 }
+
