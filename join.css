@@ -33,14 +33,32 @@ form {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
+    text-align: left; /* Align text to the left */
+}
+
+h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-input, textarea, label {
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block; /* Ensure label is on top */
+}
+
+input, textarea {
     display: block;
     width: 100%;
-    margin-bottom: 15px;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ddd;
@@ -65,19 +83,6 @@ button {
 
 button:hover {
     background-color: #e0a800;
-}
-
-/* File input styling */
-input[type="file"] {
-    padding: 0;
-    border: none;
-    background: transparent;
-}
-
-label[for="photo"] {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
 }
 
 /* Responsive design */
