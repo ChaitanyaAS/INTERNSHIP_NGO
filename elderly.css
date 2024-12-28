@@ -1,0 +1,125 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('project_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Main container */
+.container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header section */
+.header {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 100px 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Content layout */
+.content {
+    display: block;
+    padding: 20px;
+}
+
+/* Individual project styles */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 40px; /* Add spacing between projects */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: dropIn 0.5s ease-out forwards;
+}
+
+.project:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.project:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Heading styles */
+.project h2 {
+    color: #d43f3a;
+    margin-bottom: 30px;
+    flex-basis: 100%;
+}
+
+/* Project content layout */
+.project-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image and dotted line */
+    position: relative;
+}
+
+/* Image styles */
+.project-content img {
+    width: 720px; /* Maintain 16:9 ratio */
+    height: 405px; /* 16:9 ratio */
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 30px; /* Space after the image */
+}
+
+/* Dotted vertical line beside the image */
+.project-content::before {
+    content: '';
+    display: block;
+    width: 2px; /* Thickness of the vertical line */
+    height: 90%; /* Height of the line */
+    border-left: 2px dotted #c9a072; /* Dotted line */
+    position: absolute;
+    left: 750px; /* Position the line after the image */
+    top: 5%;
+}
+
+/* Text styles */
+.project-content p {
+    font-size: 30px;
+    color: #5c5249;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    margin-left: 60px; /* Space after the dotted line */
+}
+
+/* Pop-up effect on hover */
+.project-content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Drop-in animation */
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
