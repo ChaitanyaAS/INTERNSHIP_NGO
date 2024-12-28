@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: url("project_background.jpg") center center/cover no-repeat;
-}
-
 .pro {
     background-color: grey;
     color: aliceblue;
@@ -27,29 +22,37 @@ body {
     display: flex;
     flex-wrap: wrap; /* Ensures wrapping if images overflow */
     justify-content: center; /* Centers the images */
-    gap: 20px; /* Adds space between images */
-    padding: 20px;
+    gap: 50px; /* Adds space between images */
+    padding: 90px;
 }
-
 .project {
-    position: relative; /* Enables positioning for bottom text */
+    position: relative; /* Enables positioning for pseudo-elements */
     flex: 0 1 calc(33.33% - 40px); /* Ensures 3 items per row */
     max-width: calc(33.33% - 40px); /* Maintains consistency */
     text-align: center;
-    border: 15px solid orange; /* Adds an orange border */
-    border-radius: 8px; /* Optional rounded corners */
-    overflow: hidden; /* Ensures text stays within the border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
+
 }
 
 .project img {
     width: 100%; /* Fully fit within its container */
     height: 200px; /* Fixed height for equal size */
-    filter: brightness(0.7);
     object-fit: cover; /* Ensures the image fits nicely without distortion */
+    filter: brightness(0.7); /* Optional to dim the image */
 }
 
+/* Default overlay effect with orange tint and transparency */
+.project::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.5); /* Light orange color with 60% opacity */
+    z-index: 1; /* Ensures the overlay is above the image */
+}
+
+/* Bottom text styles */
 .project .bottom-text {
     position: absolute;
     bottom: 5px; /* Moves text to the bottom */
@@ -60,4 +63,7 @@ body {
     padding: 5px;
     text-align: center;
     font-weight: bold;
+    z-index: 2; /* Keeps the text above the overlay */
+
 }
+p
