@@ -1,11 +1,34 @@
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('project_background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    position: absolute;
+    top: 50px; /* Adjust to the desired top position */
+    left: 50px; /* Adjust to the desired left position */
+    width: 150px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+/* Header section */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    border-bottom: 2px solid #ddd;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
     color: #333;
+}
+
+.container {
+    padding: 20px;
 }
 
 /* Main container */
