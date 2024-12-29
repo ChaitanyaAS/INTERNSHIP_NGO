@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+.logo {
+    position: absolute;
+    top: 50px; /* Adjust to the desired top position */
+    left: 50px; /* Adjust to the desired left position */
+    width: 150px; /* Adjust the size of the logo */
+    height: auto;
+}
 
 .pro {
     background-color: grey;
@@ -66,4 +73,3 @@
     z-index: 2; /* Keeps the text above the overlay */
 
 }
-p
