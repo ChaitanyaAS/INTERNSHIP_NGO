@@ -99,16 +99,13 @@ h1 {
 
 /* Image styles */
 .project-content img {
-    width: 480px; /* Adjust width for the 16:9 aspect ratio */
-    height: calc(480px * 9 / 16); /* Height calculated dynamically for 16:9 ratio */
+    width: 720px; /* Maintain 16:9 ratio */
+    height: 405px; /* 16:9 ratio */
     border-radius: 10px;
     flex-shrink: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-right: 30px; /* Space after the image */
 }
-
-
-
 
 /* Dotted vertical line beside the image */
 .project-content::before {
@@ -118,13 +115,13 @@ h1 {
     height: 90%; /* Height of the line */
     border-left: 2px dotted #c9a072; /* Dotted line */
     position: absolute;
-    left: 500px; /* Position the line after the image */
+    left: 750px; /* Position the line after the image */
     top: 5%;
 }
 
 /* Text styles */
 .project-content p {
-    font-size: 20px; /* Decreased font size */
+    font-size: 30px;
     color: #5c5249;
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
