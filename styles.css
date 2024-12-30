@@ -27,7 +27,7 @@ nav ul {
 }
 
 .menu-toggle {
-    display: block;
+    display: none;
     cursor: pointer;
     font-size: 1.5rem;
     color: white;
@@ -111,9 +111,11 @@ nav ul li a.highlighted:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+    background-image: url('homebackground.jpg'); /* Add image URL here */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Set to full viewport height to cover the screen */
     color: white;
     text-align: left;
     padding: 100px 20px;
@@ -278,16 +280,13 @@ nav ul li a.highlighted:hover::after {
 .contact-info h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    text-align: center;
-    color: black;
 }
 
 .contact-links {
     display: block;
-    text-align: left;
+    text-align: center;
     max-width: 500px;
     margin: 0 auto;
-    margin-left: 600px;
 }
 
 .contact-links p {
@@ -343,22 +342,42 @@ nav ul li a.highlighted:hover::after {
 }
 
 /* Media Queries for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 815px) {
     /* Hero Section Adjustments */
     .hero {
-        height: 60vh;
-        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        padding: 20px;
+        height: 400px; /* Adjust height for mobile screens */
+        max-width: 100%; /* Ensures the hero section stays within bounds */
+        overflow: hidden; /* Prevent any overflow outside the hero container */
+        position: relative; /* Ensures child elements are contained properly */
     }
 
+    /* Paragraph within Hero Section */
     .hero p {
-        font-size: 2rem;
-        margin-top: 50px;
+        font-size: clamp(1rem, 4vw, 2.8rem); /* Dynamically adjusts font size */
+        margin: 0 auto;
+        text-align: center;
+        max-width: 90%; /* Ensures text doesn't go beyond the container */
+        word-wrap: break-word; /* Break long words */
+        line-height: 1.4; /* Ensure line spacing isn't too tight */
+        display: block; /* Ensures paragraph behaves as a block element */
+        position: relative; /* Ensure proper positioning */
+        z-index: 1;
+        margin-right: 10%;
+        top: 0; /* Ensure no unnecessary gap at the top */
+        text-wrap: balance; /* Ensure paragraph is on top in case of overlapping */
+        margin-top: 0; /* Ensure no top margin */
     }
 
+    /* Hero Buttons */
     .hero .buttons {
         flex-direction: column;
-        margin-top: 20px;
+        
     }
 
     .buttons .btn {
@@ -371,7 +390,7 @@ nav ul li a.highlighted:hover::after {
         transform: translateX(-50%);
     }
 
-    /* Navigation Adjustments */
+    /* Navigation */
     nav ul {
         display: none;
     }
@@ -382,7 +401,7 @@ nav ul li a.highlighted:hover::after {
         gap: 10px;
         background: rgba(0, 0, 0, 0.8);
         position: absolute;
-        top: 60px;
+        top: 40px;
         right: 0;
         padding: 20px;
         width: 250px;
@@ -410,13 +429,31 @@ nav ul li a.highlighted:hover::after {
         height: auto;
     }
 
+    /* Contact Info Section */
     .contact-info {
         flex-direction: column;
         padding: 30px;
     }
 
-    .social-icons {
-        flex-direction: column;
+    header {
+        height: 10px;
+    }
+
+    .logo img {
+        margin-top: 30px;
+    }
+
+    /* Adjusting margin-top dynamically based on screen size */
+    .hero p {
+        margin-top: 100px; /* Ensure there's no initial gap */
     }
 }
 
+
+/* Additional Media Query for Screens Below 313px */
+@media (max-width: 313px) {
+    .hero p {
+        font-size: 1rem !important; /* Force font size for very small screens */
+        margin-top: 8rem; /* Smaller margin for very small screens */
+    }
+}
