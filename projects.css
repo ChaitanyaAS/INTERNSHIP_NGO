@@ -1,23 +1,34 @@
+/* Reset default margins/paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html, body {
+    width: 100%;
+    height: 100%; /* Ensures full height */
+}
+
+/* Logo styling */
 .logo {
     position: absolute;
-    top: 50px; /* Adjust to the desired top position */
+    top: 90px; /* Adjust to the desired top position */
     left: 50px; /* Adjust to the desired left position */
     width: 150px; /* Adjust the size of the logo */
     height: auto;
 }
 
+/* Pro section styling */
 .pro {
     background-color: grey;
     color: aliceblue;
     padding: 100px 30px;
     text-align: center;
+    width: 100%;
 }
 
+/* Pro heading styling */
 .pro h1 {
     color: white;
     font-size: 5rem;
@@ -25,29 +36,30 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* Images styling */
 .images {
     display: flex;
-    flex-wrap: wrap; /* Ensures wrapping if images overflow */
-    justify-content: center; /* Centers the images */
-    gap: 50px; /* Adds space between images */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
     padding: 90px;
 }
-.project {
-    position: relative; /* Enables positioning for pseudo-elements */
-    flex: 0 1 calc(33.33% - 40px); /* Ensures 3 items per row */
-    max-width: calc(33.33% - 40px); /* Maintains consistency */
-    text-align: center;
 
+.project {
+    position: relative;
+    flex: 0 1 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    text-align: center;
 }
 
 .project img {
-    width: 100%; /* Fully fit within its container */
-    height: 200px; /* Fixed height for equal size */
-    object-fit: cover; /* Ensures the image fits nicely without distortion */
-    filter: brightness(0.7); /* Optional to dim the image */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(0.7);
 }
 
-/* Default overlay effect with orange tint and transparency */
+/* Default overlay effect */
 .project::after {
     content: '';
     position: absolute;
@@ -55,21 +67,57 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(241, 197, 114, 0.5); /* Light orange color with 60% opacity */
-    z-index: 1; /* Ensures the overlay is above the image */
+    background-color: rgba(255, 165, 0, 0.5);
+    z-index: 1;
 }
 
-/* Bottom text styles */
+/* Bottom text in projects */
 .project .bottom-text {
     position: absolute;
-    bottom: 5px; /* Moves text to the bottom */
+    bottom: 5px;
     left: 0;
-    width: 100%; /* Ensures the text spans the full width */
-    color: white; /* Text color */
-    font-size: 2rem; /* Adjust font size */
+    width: 100%;
+    color: white;
+    font-size: 2rem;
     padding: 5px;
     text-align: center;
     font-weight: bold;
-    z-index: 2; /* Keeps the text above the overlay */
+    z-index: 2;
+}
 
+/* Responsive adjustments */
+@media (max-width: 1025px) {
+    .pro {
+        padding-top: 200px;
+    }
+
+    .logo {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%); /* Horizontally centers the logo */
+        margin-left: 0;
+    }
+
+    .pro h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        text-align: center;
+        word-wrap: break-word;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Adjust project images for smaller screens */
+    .project {
+        flex: 0 1 calc(50% - 40px); /* 2 items per row */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    /* For very small screens (e.g., mobile devices) */
+    .project {
+        flex: 0 1 100%; /* 1 item per row */
+        max-width: 100%;
+    }
 }
