@@ -8,23 +8,35 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-section">
+        <section class="form-section">
             <div class="background-overlay"></div>
             <p class="overlay-text">"Your small contribution can bring big smiles!"</p>
-            <form class="donation-form">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="tel" name="mobile" placeholder="Mobile" pattern="[0-9]{10}" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <select name="donation-item" required>
-                    <option value="" disabled selected>What do you want to donate?</option>
-                    <option value="Clothes">Clothes</option>
-                    <option value="Books">Books</option>
-                    <option value="Toys">Toys</option>
-                    <option value="Money">Money</option>
-                </select>
-                <button type="submit">Next</button>
+            <form class="donation-form" action="#" method="post">
+                <fieldset>
+                    <legend>Donation Form</legend>
+                    
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Enter a 10-digit mobile number" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="donation-item">What do you want to donate?</label>
+                    <select id="donation-item" name="donation-item" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Clothes">Clothes</option>
+                        <option value="Books">Books</option>
+                        <option value="Toys">Toys</option>
+                        <option value="Money">Money</option>
+                    </select>
+
+                    <button type="submit">Next</button>
+                </fieldset>
             </form>
-        </div>
+        </section>
     </div>
 </body>
 </html>
