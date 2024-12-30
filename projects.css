@@ -55,7 +55,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 165, 0, 0.5); /* Light orange color with 60% opacity */
+    background-color: rgba(241, 197, 114, 0.5); /* Light orange color with 60% opacity */
     z-index: 1; /* Ensures the overlay is above the image */
 }
 
