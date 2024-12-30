@@ -278,6 +278,8 @@ nav ul li a.highlighted:hover::after {
 .contact-info h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: center;
+    color: black;
 }
 
 .contact-links {
@@ -285,6 +287,7 @@ nav ul li a.highlighted:hover::after {
     text-align: left;
     max-width: 500px;
     margin: 0 auto;
+    margin-left: 600px;
 }
 
 .contact-links p {
