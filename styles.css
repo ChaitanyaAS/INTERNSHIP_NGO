@@ -394,6 +394,9 @@ nav ul li a.highlighted:hover::after {
     nav ul {
         display: none;
     }
+nav ul li{
+        margin-top: 10px;
+    }
 
     nav ul.active {
         display: flex;
