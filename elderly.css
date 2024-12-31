@@ -7,8 +7,8 @@ body {
 
 .logo {
     position: absolute;
-    top: 50px; /* Adjust to the desired top position */
-    left: 50px; /* Adjust to the desired left position */
+    top: 95px; /* Adjust to the desired top position */
+    left: 90px; /* Adjust to the desired left position */
     width: 150px; /* Adjust the size of the logo */
     height: auto;
 }
