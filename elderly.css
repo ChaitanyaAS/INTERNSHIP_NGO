@@ -106,6 +106,7 @@ h1 {
     max-width: 480px; /* Maintain max width for larger screens */
     height: auto; /* Keep aspect ratio */
     border-radius: 10px;
+    aspect-ratio: 16 / 9;
     flex-shrink: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-right: 20px; /* Adjusted for smaller screens */
