@@ -127,7 +127,7 @@ nav ul li a.highlighted:hover::after {
 .hero .buttons {
     display: flex;
     justify-content: center; /* Center the buttons horizontally */
-    gap: 1px; /* Adjust the gap between buttons as needed */
+    gap: 0.5px; /* Adjust the gap between buttons as needed */
     margin-left: 0; /* Remove or reduce left margin */
 }
 
