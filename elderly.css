@@ -7,8 +7,8 @@ body {
 
 .logo {
     position: absolute;
-    top: 95px; /* Adjust to the desired top position */
-    left: 90px; /* Adjust to the desired left position */
+    top: 50px; /* Adjust to the desired top position */
+    left: 50px; /* Adjust to the desired left position */
     width: 150px; /* Adjust the size of the logo */
     height: auto;
 }
@@ -102,12 +102,13 @@ h1 {
 
 /* Image styles */
 .project-content img {
-    width: 720px; /* Maintain 16:9 ratio */
-    height: 405px; /* 16:9 ratio */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 480px; /* Maintain max width for larger screens */
+    height: auto; /* Keep aspect ratio */
     border-radius: 10px;
     flex-shrink: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 30px; /* Space after the image */
+    margin-right: 20px; /* Adjusted for smaller screens */
 }
 
 /* Dotted vertical line beside the image */
@@ -118,20 +119,19 @@ h1 {
     height: 90%; /* Height of the line */
     border-left: 2px dotted #c9a072; /* Dotted line */
     position: absolute;
-    left: 750px; /* Position the line after the image */
+    left: 500px; /* Position the line after the image */
     top: 5%;
 }
 
 /* Text styles */
 .project-content p {
-    font-size: 30px;
+    font-size: 19px; /* Adjusted for smaller screens */
     color: #5c5249;
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-    margin-left: 60px; /* Space after the dotted line */
+    font-weight: 700;
+    margin-left: 0; /* Remove left margin for smaller screens */
 }
-
 /* Pop-up effect on hover */
 .project-content img:hover {
     transform: scale(1.1);
