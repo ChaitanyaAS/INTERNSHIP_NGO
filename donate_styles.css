@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -47,17 +48,16 @@ body {
 .donation-form {
     position: relative;
     z-index: 3;
-    background: rgba(255, 255, 255, 0.1); /* 70% white with 30% transparency */
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
     max-width: 400px;
-    width: 25%;
+    width: 100%; /* Changed to make it responsive */
 }
 
-
-.donation-form input, 
-.donation-form select, 
+.donation-form input,
+.donation-form select,
 .donation-form button {
     width: 100%;
     margin-bottom: 20px;
@@ -69,12 +69,12 @@ body {
 }
 
 .donation-form select {
-    appearance: none; /* Remove default arrow for custom styling */
-    background: #fff url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjQ0NDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gPHBhdGggZD0iTTguNzc1IDkuOTQ2bDQtNC00LTQtMS41NDcgMS41NDdsMy40NTMgMy40NTMtMy40NTMgMy40NTd6Ii8+IDwvc3ZnPg==") no-repeat right 10px center; /* Add a custom dropdown arrow */
-    background-size: 12px; /* Adjust size of the arrow */
+    appearance: none;
+    background: #fff url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjQ0NDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gPHBhdGggZD0iTTguNzc1IDkuOTQ2bDQtNC00LTQtMS41NDcgMS41NDdsMy40NTMgMy40NTMtMy40NTMgMy40NTd6Ii8+IDwvc3ZnPg==") no-repeat right 10px center;
+    background-size: 12px;
 }
 
-.donation-form input:focus, 
+.donation-form input:focus,
 .donation-form select:focus {
     border-color: #007BFF;
     outline: none;
@@ -90,7 +90,6 @@ body {
     transition: background-color 0.3s;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.2s;
-
 }
 
 .donation-form button:hover {
@@ -98,5 +97,34 @@ body {
 }
 
 .donation-form button:active {
-    transform: scale(0.98); /* Slight compression when clicked */
+    transform: scale(0.98);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 1.2em;
+    }
+
+    .donation-form {
+        padding: 15px;
+        width: 80%; /* Reduce the width on smaller screens */
+    }
+
+    .donation-form input,
+    .donation-form select,
+    .donation-form button {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-text {
+        font-size: 1em; /* Smaller font size for extra small screens */
+    }
+
+    .donation-form {
+        width: 90%; /* Further reduce the width for very small screens */
+    }
 }
