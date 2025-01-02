@@ -3,20 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0e0e0;
+    background: url('honour_bg.avif') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    color: white; /* Sets default text color for readability */
 }
-/* Logo styling */
-.logo {
-    position: absolute;
-    top: 50px; /* Adjust to the desired top position */
-    left: 75px; /* Adjust to the desired left position */
-    width: 150px; /* Adjust the size of the logo */
-    height: auto;
-}
+
 /* Honours Section Styling */
 .honours {
-    background-color: #4a4a4a;
-    color: white;
     text-align: center;
     padding-bottom: 30px;
 }
@@ -25,105 +18,126 @@ body {
     font-size: 3rem;
     font-weight: bold;
     color: #f5f3f1;
-    background-color: orange;
-    padding: 40px 600px;
+    background-color: rgba(255, 165, 0, 0.9); /* Semi-transparent orange */
+    padding: 40px 400px;
     display: inline-block;
     border-radius: 40px;
+    text-align: right; /* Aligns text inside the h2 element */
+    margin-left: 580px; /* Pushes the element to the right */
+    margin-right: 20px;
 }
 
 .honours-header p {
     font-size: 1.8rem;
     margin-top: 15px;
     font-weight: bold;
+    margin-left: 500px; 
 }
 
 .honours-content {
     display: flex;
-    justify-content: center;
-    gap: 120px;
+    justify-content: flex-end;
+    gap: 100px;
     flex-wrap: wrap;
     margin: 30px 0;
+    margin-left: 100px;
 }
-
-/* Adjust honours card size */
+/*
 .honours-card {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background 
     padding: 10px;
     border-radius: 8px;
-    width: 180px; /* Reduced box width */
+    width: 180px;
     height: auto;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
-
-/* Ensure images fit properly */
+*/
 .honours-card img {
-    width: 100%;
-    height: 180px; /* Fixed height for uniformity */
-    border-radius: 8px;
-    object-fit: cover; /* Ensures proportional scaling */
+    width: 200px; /* Set a fixed width for the circle */
+    height: 200px; /* Set a fixed height for the circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the frame without distortion */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Style names under images */
-.honours-card p {
-    margin-top: 10px;
-    font-weight: bold;
-    color: white;
-    font-size: 1rem;
+    margin: 0 auto; /* Centers the image in the card */
+    display: block; /* Ensures consistent alignment */
 }
 
 
 .honours-description {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 20px auto;
     font-size: 1.2rem;
     line-height: 1.6;
     color: #f5f5f5;
+    margin-right: 100px;
 }
 
 /* Monthly Inspirers Section Styling */
 .inspirers {
-    background-color: #4a4a4a;
-    color: white;
     text-align: center;
     padding: 30px 0;
 }
 
-.inspirers-header {
-    background-color: orange;
-    color: white;
-    font-size: 2rem;
+.inspirers-header h2 {
+    font-size: 3rem;
     font-weight: bold;
-    padding: 40px 600px;
-    border-radius: 20px;
+    color: #f5f3f1;
+    background-color: rgba(255, 165, 0, 0.9); /* Semi-transparent orange */
+    padding: 40px 400px; /* Adjust padding to fit the text in a single line */
     display: inline-block;
-    margin-bottom: 30px;
+    border-radius: 40px;
+    text-align: right; /* Aligns text inside the h2 element */
+    margin-left: 450px; /* Pushes the element to the right */
+    margin-right: 20px;
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
+/* Align the content of the inspirers section */
 .inspirers-content {
     display: flex;
-    justify-content: center;
-    gap: 150px;
+    justify-content: flex-start; /* Aligns items from the start */
+    gap: 80px; /* Adds space between the cards */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    padding-right: 50px; /* Adds space to the right */
+    margin-left: 500px; /* Optional: Align content slightly to the left for balance */
 }
 
+/* Inspirer card styling */
 .inspirer-card {
     text-align: center;
     width: 250px;
 }
 
+/* Circular frame for the image */
 .inspirer-card img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fills the frame without distortion */
+    width: 200px; /* Width of the circular frame */
+    height: 200px; /* Height of the circular frame */
+    border-radius: 50%; /* Ensures the image stays in a circle */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    /*border: 5px solid white; /* Optional: Adds a border around the circle */
 }
 
+/* Name and role styling */
 .inspirer-card p {
     margin-top: 10px;
     font-weight: bold;
     color: white;
+}
+
+/* Styling for Name and Role */
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.role {
+    font-size: 1rem;
+    color: #ffcc00; /* Yellow color for the role */
+    margin-top: 5px;
 }
 
 /* Responsive Design */
@@ -149,6 +163,11 @@ body {
     .inspirers-header {
         font-size: 1.8rem;
         padding: 15px;
+    }
+
+    .inspirers-content {
+        justify-content: center; /* Centers the cards */
+        gap: 30px; /* Reduces the gap for better fit */
     }
 
     .honours-card img, 
@@ -183,6 +202,12 @@ body {
 
     .inspirers-header {
         font-size: 1.5rem;
+    }
+
+    .inspirers-content {
+        flex-direction: column; /* Stacks the cards vertically */
+        gap: 20px; /* Reduces the gap for smaller devices */
+        align-items: center; /* Centers the cards vertically */
     }
 
     .honours-card img, 
