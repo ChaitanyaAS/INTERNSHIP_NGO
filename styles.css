@@ -154,7 +154,7 @@ nav ul li a.highlighted:hover::after {
     left: 200px; /* Adjust the position as needed */
     z-index: 500; /* Ensure it stays above hero section content */
     height: 30%;
-    filter: brightness(1);
+    filter: brightness(1.8);
 }
 
 .hero p {
