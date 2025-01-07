@@ -107,22 +107,55 @@ nav ul li a.highlighted:hover::after {
 
 /* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-image: url('homebackground.jpg'); /* Add image URL here */
-    background-size: cover; /* Ensure the image covers the section */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    height: 100vh; /* Set to full viewport height to cover the screen */
-    color: white;
-    text-align: left;
-    padding: 100px 20px;
     position: relative;
-    filter: brightness(0.8);
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    color: white;
 }
 
+.hero-slides {
+    display: flex;
+    width: 400%;
+    animation: slide 16s infinite;
+}
+
+.hero-slide {
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    flex-shrink: 0;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+.hero .logo img {
+    width: 150px;
+    margin-top: 50px;
+}
+
+.hero p {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+}
 /* Hero Section Buttons */
 .hero .buttons {
     display: flex;
@@ -155,7 +188,6 @@ nav ul li a.highlighted:hover::after {
     left: 200px; /* Adjust the position as needed */
     z-index: 500; /* Ensure it stays above hero section content */
     height: 30%;
-    filter: brightness(1.8);
 }
 
 .hero p {
