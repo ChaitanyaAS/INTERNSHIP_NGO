@@ -126,10 +126,11 @@ nav ul li a.highlighted:hover::after {
 /* Hero Section Buttons */
 .hero .buttons {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 0.5px; /* Adjust the gap between buttons as needed */
-    margin-left: 0; /* Remove or reduce left margin */
+    justify-content: flex-start; /* Align buttons next to each other */
+    gap: 0px; /* Adjust gap between buttons */
+    margin-left: 0;
 }
+
 
 /* Button Styles */
 .buttons .btn {
@@ -169,6 +170,7 @@ nav ul li a.highlighted:hover::after {
 
 .buttons {
     display: flex;
+    gap: 0px;
 }
 
 /* Button Styles */
@@ -273,30 +275,31 @@ nav ul li a.highlighted:hover::after {
 .contact-info {
     padding: 50px;
     background: rgb(245, 176, 92);
-    color: white;
+    color: rgb(18, 15, 15);
     text-align: center;
 }
 
 .contact-info h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .contact-links {
     display: block;
-    text-align: left;
+    text-align: center;
     max-width: 500px;
     margin: 0 auto;
+    gap: 10px
 }
 
 .contact-links p {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
 .contact-links a {
     text-decoration: none;
-    color: white;
+    color: rgb(19, 18, 18);
     transition: color 0.3s ease;
 }
 
@@ -311,9 +314,7 @@ nav ul li a.highlighted:hover::after {
     right: 10px; /* Adds some spacing from the edge */
     transform: translateY(-50%);
     z-index: 1000; /* Ensures it stays above the background */
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white background */
     padding: 10px 0;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .social-icons {
