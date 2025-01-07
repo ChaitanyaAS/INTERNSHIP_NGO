@@ -37,13 +37,25 @@ nav ul.active {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Ensure the menu background stays dark */
     position: absolute;
-    top: 60px;
+    top: 60px; /* Place the menu below the header */
     right: 0;
-    width: 200px;
+    width: 100%; /* Full width on mobile */
     padding: 20px;
     z-index: 1000;
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Optional: Add transition for smooth menu toggle */
+nav ul {
+    transition: display 0.3s ease; /* Smooth transition for displaying the menu */
 }
 
 nav ul {
@@ -99,81 +111,78 @@ nav ul li a.highlighted {
 nav ul li a.highlighted:hover::after {
     transform: none; /* Disable line animation for Events */
 }
-.hero {
-    height: 80vh; /* Relative to the viewport height */
-    padding: 5vw 2vw; /* Adjust padding relative to the viewport width */
-}
-
-
 /* Hero Section */
 .hero {
     position: relative;
+    background: url('homebackground.jpg') no-repeat center center/cover;
     height: 100vh;
-    overflow: hidden;
     text-align: center;
-    color: white;
-}
-
-.hero-slides {
-    display: flex;
-    width: 400%;
-    animation: slide 16s infinite;
-}
-
-.hero-slide {
-    width: 25%;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    flex-shrink: 0;
-    transition: all 1s ease-in-out;
-}
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-25%); }
-    50% { transform: translateX(-50%); }
-    75% { transform: translateX(-75%); }
-    100% { transform: translateX(0); }
-}
-
-.hero .logo img {
-    width: 150px;
-    margin-top: 50px;
 }
 
 .hero p {
-    font-size: 2rem;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8rem;
+    margin-top: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(237, 231, 231);  /* Light text color */
+    white-space: nowrap;
+    z-index: 100;
 }
 
-.buttons .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f44336;
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    border-radius: 5px;
+
+.hero-slides {
+    display: flex;
+    width: 300%; /* Total width to account for 3 slides */
+    animation: forward-backward 8s infinite ease-in-out; /* Forward and Backward movement */
+}
+
+.hero-slide {
+    width: 33.33%; /* Each slide takes up one-third of the container width */
+    height: 100vh; /* Match the height of the hero section */
+    background-size: cover; /* Ensure images cover their slides */
+    background-position: center center; /* Center align images */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Keyframes for Forward and Backward movement */
+@keyframes forward-backward {
+    0% { transform: translateX(0); }            /* Start at first slide */
+    16.67% { transform: translateX(0); }        /* Pause at first slide */
+    33.33% { transform: translateX(-33.33%); }  /* Slide to second */
+    50% { transform: translateX(-33.33%); }     /* Pause at second slide */
+    66.67% { transform: translateX(-66.66%); }  /* Slide to third */
+    83.33% { transform: translateX(-33.33%); }  /* Back to second */
+    100% { transform: translateX(0); }          /* Back to first */
+}
+
+.hero .logo img {
+    width: 200px;
+    margin-top: 50px;
 }
 /* Hero Section Buttons */
 .hero .buttons {
+    position: absolute;
+    top: 80%; /* Adjusts buttons to be placed lower */
+    left: 20%;
+    transform: translateX(-50%); /* Centers the buttons horizontally */
     display: flex;
-    justify-content: flex-start; /* Align buttons next to each other */
-    gap: 0px; /* Adjust gap between buttons */
-    margin-left: 0;
+    justify-content: space-between;
+    gap: 20px; /* Space between buttons */
+    z-index: 200; /* Ensures buttons are above other content */
 }
 
-
-/* Button Styles */
 .buttons .btn {
     text-decoration: none;
     background: orange;
     color: white;
-    padding: 10px 30px;
-    font-size: 1rem;
+    padding: 12px 30px;
+    font-size: 1.2rem;
     border-radius: 5px;
     transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .buttons .btn:hover {
@@ -318,7 +327,8 @@ nav ul li a.highlighted:hover::after {
 
 .contact-links {
     display: block;
-    text-align: center;
+    text-align: left;
+    color: white;
     max-width: 500px;
     margin: 0 auto;
     gap: 10px
@@ -331,7 +341,7 @@ nav ul li a.highlighted:hover::after {
 
 .contact-links a {
     text-decoration: none;
-    color: rgb(19, 18, 18);
+    color: rgb(246, 242, 242);
     transition: color 0.3s ease;
 }
 
