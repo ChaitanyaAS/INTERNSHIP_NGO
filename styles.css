@@ -55,7 +55,7 @@ nav ul.active {
 
 /* Optional: Add transition for smooth menu toggle */
 nav ul {
-    transition: display 0.3s ease; /* Smooth transition for displaying the menu */
+    transition: display 1s ease; /* Smooth transition for displaying the menu */
 }
 
 nav ul {
