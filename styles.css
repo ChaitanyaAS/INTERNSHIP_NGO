@@ -149,14 +149,14 @@ nav ul li a.highlighted:hover::after {
 
 /* Keyframes for Forward and Backward movement */
 @keyframes forward-backward {
-    0% { transform: translateX(0); }            /* Start at first slide */
-    16.67% { transform: translateX(0); }        /* Pause at first slide */
-    33.33% { transform: translateX(-33.33%); }  /* Slide to second */
-    50% { transform: translateX(-33.33%); }     /* Pause at second slide */
-    66.67% { transform: translateX(-66.66%); }  /* Slide to third */
-    83.33% { transform: translateX(-33.33%); }  /* Back to second */
-    100% { transform: translateX(0); }          /* Back to first */
+    0% { transform: translateX(0); }             /* Start at first slide */
+    20% { transform: translateX(-33.33%); }      /* Slide to second */
+    40% { transform: translateX(-66.66%); }      /* Slide to third */
+    60% { transform: translateX(-33.33%); }      /* Back to second */
+    80% { transform: translateX(0); }            /* Back to first */
+    100% { transform: translateX(0); }           /* Ensure loop continuity */
 }
+
 
 .hero .logo img {
     width: 300px;
