@@ -51,36 +51,49 @@ body {
     max-width: 400px;
     text-align: center;
     position: relative; /* Add this */
-    top: -130px; /* Move the box 20px upward */
+    top: -45px; /* Move the box 20px upward */
   }
   
   .donation-form input,
-  .donation-form select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    box-align: top;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  .donation-form select,
+  .donation-form textarea {
+      background: rgba(255, 255, 255, 0.2); /* Uniform transparency */
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      box-sizing: border-box; /* Ensures padding doesn't affect width */
+      color: #070707; /* White text for better visibility */
   }
+  
+  .donation-form input::placeholder,
+  .donation-form textarea::placeholder {
+      color: rgba(4, 4, 4, 0.7); /* Slightly lighter placeholder text */
+  }
+  
+  .donation-form select {
+      appearance: none;
+      background: rgba(255, 255, 255, 0.2); /* Same transparency as inputs */
+      color: rgba(4, 4, 4, 0.7); /* White text for options */
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><polygon points="0,0 10,0 5,6" fill="#fff"/></svg>'); 
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 10px;
+  }
+  
   
   .donation-form label {
     display: block;
     font-size: 0.9em; /* Adjust font size */
-    color: #333; /* Label color */
+    color: #413f3f; /* Label color */
     margin-bottom: 5px; /* Spacing between label and input */
     text-align: left; /* Align labels to the left */
     font-weight: bold; /* Make labels bold for better visibility */
 }
 
-  .donation-form select {
-    color: #555;
-    appearance: none;
-    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><polygon points="0,0 10,0 5,6" fill="#555"/></svg>') no-repeat right 10px center;
-    background-size: 10px;
-  }
+  
   
   .donation-form button {
     margin-top: 20px; /* Add gap above the button */
