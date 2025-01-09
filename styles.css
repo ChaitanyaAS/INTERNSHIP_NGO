@@ -136,7 +136,7 @@ nav ul li a.highlighted:hover::after {
 .hero-slides {
     display: flex;
     width: 300%; /* Total width to account for 3 slides */
-    animation: forward-backward 8s infinite ease-in-out; /* Forward and Backward movement */
+    animation: forward-cycle 15s infinite ease-in-out; /* Smooth cycle animation */
 }
 
 .hero-slide {
@@ -148,13 +148,11 @@ nav ul li a.highlighted:hover::after {
 }
 
 /* Keyframes for Forward and Backward movement */
-@keyframes forward-backward {
-    0% { transform: translateX(0); }             /* Start at first slide */
-    20% { transform: translateX(-33.33%); }      /* Slide to second */
-    40% { transform: translateX(-66.66%); }      /* Slide to third */
-    60% { transform: translateX(-33.33%); }      /* Back to second */
-    80% { transform: translateX(0); }            /* Back to first */
-    100% { transform: translateX(0); }           /* Ensure loop continuity */
+@keyframes forward-cycle {
+    0% { transform: translateX(0); }              /* Start at slide 1 */
+    33.33% { transform: translateX(-33.33%); }   /* Move to slide 2 */
+    66.66% { transform: translateX(-66.66%); }   /* Move to slide 3 */
+    100% { transform: translateX(0); }           /* Loop back to slide 1 */
 }
 
 
