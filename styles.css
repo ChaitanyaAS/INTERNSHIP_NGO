@@ -136,17 +136,16 @@ nav ul li a.highlighted:hover::after {
 
 .hero-slides {
     display: flex;
-    width: 300%; /* Total width for 3 slides */
-    animation: seamless-cycle 9s infinite linear; /* Smooth continuous cycle */
-    will-change: transform; /* Optimizes the animation for performance */
+    width: 300%; /* Total width to account for 3 slides */
+    animation: forward-cycle 8s infinite ease-in-out; /* Smooth cycle animation */
 }
 
 /* Keyframes for Forward and Backward movement */
-@keyframes seamless-cycle {
-    0% { transform: translateX(0); }             /* Slide 1 */
-    33.33% { transform: translateX(-33.33%); }  /* Slide 2 */
-    66.66% { transform: translateX(-66.66%); }  /* Slide 3 */
-    100% { transform: translateX(0); }          /* Back to Slide 1 */
+@keyframes forward-cycle {
+    0% { transform: translateX(0); }              /* Start at slide 1 */
+    33.33% { transform: translateX(-33.33%); }   /* Move to slide 2 */
+    66.66% { transform: translateX(-66.66%); }   /* Move to slide 3 */
+    100% { transform: translateX(0); }           /* Loop back to slide 1 */
 }
 
 
