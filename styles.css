@@ -310,43 +310,68 @@ nav ul li a.highlighted:hover::after {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-
 /* Contact Section */
 .contact-info {
     padding: 50px;
     background: rgb(245, 176, 92);
     color: rgb(18, 15, 15);
     text-align: center;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .contact-info h2 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
 .contact-links {
-    display: block;
-    color: white;
-    max-width: 900px;
-    margin: 0 auto;
-    gap: 10px
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    gap: 10px; /* Space between contact items */
+    max-width: 6000px;
+    padding: 0 20px; /* Add padding for spacing */
 }
 
 .contact-links p {
     font-size: 1.2rem;
-    margin: 8px 0;
-    padding-right: 90px;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Align icon and text in a line */
+    margin-left: 530px;
 }
 
 .contact-links a {
     text-decoration: none;
     color: rgb(246, 242, 242);
     transition: color 0.3s ease;
+    font-weight: bold;
 }
 
 .contact-links a:hover {
     color: #ffcc00;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 30px;
+    }
+
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .contact-links {
+        padding: 0 10px;
+    }
+
+    .contact-links p {
+        font-size: 1rem;
+    }
+}
+
 /* Social Media Section */
 .social-media {
     position: fixed;
