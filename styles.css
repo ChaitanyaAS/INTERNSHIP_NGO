@@ -133,11 +133,6 @@ nav ul li a.highlighted:hover::after {
 }
 
 
-.hero-slides {
-    display: flex;
-    width: 300%; /* Total width to account for 3 slides */
-    animation: forward-cycle 15s infinite ease-in-out; /* Smooth cycle animation */
-}
 
 .hero-slides {
     display: flex;
