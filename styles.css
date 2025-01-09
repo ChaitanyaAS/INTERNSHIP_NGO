@@ -139,20 +139,19 @@ nav ul li a.highlighted:hover::after {
     animation: forward-cycle 15s infinite ease-in-out; /* Smooth cycle animation */
 }
 
-.hero-slide {
-    width: 33.33%; /* Each slide takes up one-third of the container width */
-    height: 100vh; /* Match the height of the hero section */
-    background-size: cover; /* Ensure images cover their slides */
-    background-position: center center; /* Center align images */
-    flex-shrink: 0; /* Prevent shrinking */
+.hero-slides {
+    display: flex;
+    width: 300%; /* Total width for 3 slides */
+    animation: seamless-cycle 9s infinite linear; /* Smooth continuous cycle */
+    will-change: transform; /* Optimizes the animation for performance */
 }
 
 /* Keyframes for Forward and Backward movement */
-@keyframes forward-cycle {
-    0% { transform: translateX(0); }              /* Start at slide 1 */
-    33.33% { transform: translateX(-33.33%); }   /* Move to slide 2 */
-    66.66% { transform: translateX(-66.66%); }   /* Move to slide 3 */
-    100% { transform: translateX(0); }           /* Loop back to slide 1 */
+@keyframes seamless-cycle {
+    0% { transform: translateX(0); }             /* Slide 1 */
+    33.33% { transform: translateX(-33.33%); }  /* Slide 2 */
+    66.66% { transform: translateX(-66.66%); }  /* Slide 3 */
+    100% { transform: translateX(0); }          /* Back to Slide 1 */
 }
 
 
