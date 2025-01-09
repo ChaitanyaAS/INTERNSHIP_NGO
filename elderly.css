@@ -7,9 +7,9 @@ body {
 
 .logo {
     position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 150px;
+    top: 90px; /* Adjust to the desired top position */
+    left: 50px; /* Adjust to the desired left position */
+    width: 150px; /* Adjust the size of the logo */
     height: auto;
 }
 
@@ -23,8 +23,9 @@ body {
 
 h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 4em;
     color: #f9f6f6;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -85,8 +86,10 @@ h1 {
 /* Heading styles */
 .project h2 {
     color: #d43f3a;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     flex-basis: 100%;
+    font-size: 1.7rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Project content layout */
@@ -106,26 +109,12 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-right: 30px;
 }
-
-/* Dotted vertical line beside the image */
 /* Project content layout */
 .project-content {
     display: flex;
     align-items: center;
     gap: 20px;
     position: relative; /* Added this for the correct positioning of the dotted line */
-}
-
-/* Dotted vertical line beside the image */
-.project-content::before {
-    content: '';
-    display: block;
-    width: 2px;
-    height: 90%;
-    border-left: 2px dotted #c9a072;
-    position: absolute;
-    top: 5%;
-    left: 40%; /* Dynamically position it in the middle of the content */
 }
 
 
@@ -136,7 +125,7 @@ h1 {
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
-    margin-left: 60px;
+    margin-left: 20px;
 }
 
 /* Pop-up effect on hover */
