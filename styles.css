@@ -104,12 +104,11 @@ nav ul li a.highlighted {
 nav ul li a.highlighted:hover::after {
     transform: none; /* Disable line animation for Events */
 }
-/* Hero Section */
 .hero {
     position: relative;
-    background: url('homebackground.jpg') no-repeat center center/cover;
     height: 100vh;
-    text-align: center;
+    overflow: hidden; /* Prevent content overflow */
+    background: #000; /* Fallback for black */
 }
 
 .hero p {
@@ -129,32 +128,26 @@ nav ul li a.highlighted:hover::after {
 
 .hero-slides {
     display: flex;
-    width: 300%; /* Width needs to be 3 times the size of a single slide */
-    animation: slideBackground 10s infinite;
+    width: 400%; /* 4 slides: 3 originals + 1 duplicate */
+    animation: seamless-cycle 12s infinite linear;
+    will-change: transform; /* Optimize animation */
 }
 
 .hero-slide {
-    width: 33.33%; /* Each slide takes up one-third of the container width */
-    height: 100vh; /* Match the height of the hero section */
-    background-size: cover; /* Ensure images cover their slides */
-    background-position: center center; /* Center align images */
+    width: 25%; /* Each slide is 1/4th of the total width */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     flex-shrink: 0; /* Prevent shrinking */
 }
 
-/* Keyframes for the infinite slide animation */
-@keyframes slideBackground {
-    0% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(-33.33%);
-    }
-    66% {
-        transform: translateX(-66.66%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+/* Keyframes for Seamless Transition */
+@keyframes seamless-cycle {
+    0% { transform: translateX(0); }            /* Start at Slide 1 */
+    25% { transform: translateX(-25%); }       /* Move to Slide 2 */
+    50% { transform: translateX(-50%); }       /* Move to Slide 3 */
+    75% { transform: translateX(-75%); }       /* Move to Duplicate of Slide 1 */
+    100% { transform: translateX(-75%); }      /* Stay on Duplicate */
 }
 .hero .logo img {
     width: 200px;
@@ -316,62 +309,39 @@ nav ul li a.highlighted:hover::after {
     background: rgb(245, 176, 92);
     color: rgb(18, 15, 15);
     text-align: center;
-    max-width: 2000px;
-    margin: 0 auto;
 }
 
 .contact-info h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
 }
 
 .contact-links {
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start of the container */
-    gap: 10px; /* Space between contact items */
-    max-width: 6000px;
-    padding: 0 20px; /* Add padding for spacing */
+    display: flex; /* Align items horizontally */
+    flex-direction: column; /* Stack each contact row vertically */
+    color: white;
+    max-width: 900px;
+    margin-left: 500px;
+    gap: 15px; /* Space between each contact row */
 }
 
 .contact-links p {
     font-size: 1.2rem;
-    margin: 0; /* Remove default margin */
-    display: flex; /* Align icon and text in a line */
-    margin-left: 530px;
+    margin: 0; /* Remove extra margin */
+    display: flex; /* Align label and content on the same line */
+    align-items: center; /* Vertically center items */
+    gap: 10px; /* Add space between label and value */
 }
 
 .contact-links a {
     text-decoration: none;
     color: rgb(246, 242, 242);
     transition: color 0.3s ease;
-    font-weight: bold;
 }
 
 .contact-links a:hover {
     color: #ffcc00;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-info {
-        padding: 30px;
-    }
-
-    .contact-info h2 {
-        font-size: 2rem;
-    }
-
-    .contact-links {
-        padding: 0 10px;
-    }
-
-    .contact-links p {
-        font-size: 1rem;
-    }
-}
-
 /* Social Media Section */
 .social-media {
     position: fixed;
