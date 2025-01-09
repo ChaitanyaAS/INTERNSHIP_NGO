@@ -302,7 +302,6 @@ nav ul li a.highlighted:hover::after {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-
 /* Contact Section */
 .contact-info {
     padding: 50px;
@@ -318,9 +317,8 @@ nav ul li a.highlighted:hover::after {
 
 .contact-links {
     display: block;
-    text-align: left;
     color: white;
-    max-width: 500px;
+    max-width: 900px;
     margin: 0 auto;
     gap: 10px
 }
@@ -328,6 +326,7 @@ nav ul li a.highlighted:hover::after {
 .contact-links p {
     font-size: 1.2rem;
     margin: 8px 0;
+    padding-right: 90px;
 }
 
 .contact-links a {
@@ -339,7 +338,6 @@ nav ul li a.highlighted:hover::after {
 .contact-links a:hover {
     color: #ffcc00;
 }
-
 /* Social Media Section */
 .social-media {
     position: fixed;
