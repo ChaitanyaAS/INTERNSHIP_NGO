@@ -114,9 +114,9 @@ nav ul li a.highlighted:hover::after {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('homebackground.jpg') no-repeat center center/cover;
     height: 100vh;
-    text-align: center;
+    overflow: hidden; /* Prevent content overflow */
+    background: #000; /* Fallback for black */
 }
 
 .hero p {
@@ -136,26 +136,26 @@ nav ul li a.highlighted:hover::after {
 
 .hero-slides {
     display: flex;
-    width: 300%; /* Total width to account for 3 slides */
-    animation: forward-backward 8s infinite ease-in-out; /* Forward and Backward movement */
+    width: 400%; /* 4 slides: 3 originals + 1 duplicate */
+    animation: seamless-cycle 12s infinite linear;
+    will-change: transform; /* Optimize animation */
 }
 
 .hero-slide {
-    width: 33.33%; /* Each slide takes up one-third of the container width */
-    height: 100vh; /* Match the height of the hero section */
-    background-size: cover; /* Ensure images cover their slides */
-    background-position: center center; /* Center align images */
+    width: 25%; /* Each slide is 1/4th of the total width */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     flex-shrink: 0; /* Prevent shrinking */
 }
 
-/* Keyframes for Forward and Backward movement */
-@keyframes forward-backward {
-    0% { transform: translateX(0); }             /* Start at first slide */
-    20% { transform: translateX(-33.33%); }      /* Slide to second */
-    40% { transform: translateX(-66.66%); }      /* Slide to third */
-    60% { transform: translateX(-33.33%); }      /* Back to second */
-    80% { transform: translateX(0); }            /* Back to first */
-    100% { transform: translateX(0); }           /* Ensure loop continuity */
+/* Keyframes for Seamless Transition */
+@keyframes seamless-cycle {
+    0% { transform: translateX(0); }            /* Start at Slide 1 */
+    25% { transform: translateX(-25%); }       /* Move to Slide 2 */
+    50% { transform: translateX(-50%); }       /* Move to Slide 3 */
+    75% { transform: translateX(-75%); }       /* Move to Duplicate of Slide 1 */
+    100% { transform: translateX(-75%); }      /* Stay on Duplicate */
 }
 
 
