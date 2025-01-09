@@ -47,6 +47,9 @@ body {
 .honours-header, .inspirers-header {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%; /* Ensures full width */
+    overflow: hidden; /* Hides any content that extends beyond the container */
+    box-sizing: border-box;
 }
 
 .honours-content, .inspirers-content {
@@ -88,7 +91,8 @@ body {
     gap: 100px;
     flex-wrap: wrap;
     margin: 30px 0;
-    margin-left: 100px;
+    margin-left: 80px;
+	margin-right: 10px;
 }
 
 .honours-card img {
@@ -152,13 +156,14 @@ body {
     flex-wrap: wrap;
     margin: 50px 0;
     margin-left: 50px; /* Matches Honours section alignment */
+	margin-right: 10px;
 }
 
 .inspirer-card img {
     width: 200px;
     height: 200px;
-    object-fit: cover; /* Matches Honours card image styling */
-    box-shadow: 0px 4px 6px rgba(244, 242, 242, 0.3);
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(249, 246, 246, 0.3);
     margin: 0 auto;
     display: block;
 }
@@ -192,83 +197,122 @@ body {
 }
 
 /* Responsive Design */
+
+
+/* Responsive Design */
+/* Responsive Design for Tablets and Smaller Devices */
 @media (max-width: 768px) {
-    .honours-header h2 {
-        font-size: 2.5rem;
-        padding: 15px 30px;
+    body {
+        font-size: 14px; /* Adjusts font size for smaller devices */
     }
 
-    .honours-header p {
-        font-size: 1.5rem;
+    /* Header and Logo */
+    .logo-container {
+        top: 20px;
+        left: 20px;
+        width: 120px;
     }
 
-    .honours-card {
-        width: 180px;
+    .logo {
+		margin-top:-25px;
+        left:70%;
     }
+	.honours{
+		margin-top:150px;
+	}
 
-    .honours-description {
-        font-size: 1rem;
-        padding: 0 15px;
-    }
-
-    .inspirers-header {
-        font-size: 1.8rem;
-        padding: 15px;
-    }
-
-    .inspirers-content {
-        justify-content: center; /* Centers the cards */
-        gap: 30px; /* Reduces the gap for better fit */
-    }
-
-    .honours-card img, 
-    .inspirer-card img {
-        width: 100%; /* Fills resized card width */
-        height: auto; /* Maintains aspect ratio */
-    }
-
-    .inspirer-card img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .honours-header h2 {
+    /* Honours Section */
+    .honours-header h2, 
+    .inspirers-header h2 {
         font-size: 2rem;
         padding: 10px 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center; /* Centers the header for mobile */
     }
 
-    .honours-header p {
+    .honours-header p, 
+    .inspirers-header p {
         font-size: 1.2rem;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
     }
 
-    .honours-card {
-        width: 150px;
+    /* Content Adjustment */
+    .honours-content, 
+    .inspirers-content {
+        justify-content: center; /* Centers cards on smaller screens */
+        gap: 20px; /* Moderate gap between cards */
+        padding: 0 10px;
+        flex-wrap: wrap;
+		margin-left:20px;
     }
 
-    .honours-description {
+    /* Card Styles */
+    .honours-card, 
+    .inspirer-card {
+        width: 40%; /* Adjust card width for a centered layout */
+        margin: 10px; /* Add space between the cards */
+        display: inline-block; /* Prevents items from spilling */
+        text-align: center;
+    }
+
+    /* Polaroid Frame & Image Style */
+    .polaroid {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        padding: 1px 1px 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .polaroid-img {
+        width: 100%; /* Makes image fit the frame without overflow */
+        height: auto;
+        object-fit: cover;
+        border-width: 3px;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    .role {
         font-size: 0.9rem;
     }
+	.inspirer-card img {
+		width: 265px;
+		height: 250px;
+	}
+	.honours-card img{
+		width: 265px;
+		height: 250px;
+	}
+}
 
-    .inspirers-header {
-        font-size: 1.5rem;
+/* Responsive Design for Extra Small Devices */
+@media (max-width: 480px) {
+    .honours-header h2, 
+    .inspirers-header h2 {
+        font-size: 1.8rem;
     }
 
+    /* Content Adjustment */
+    .honours-content, 
     .inspirers-content {
-        flex-direction: column; /* Stacks the cards vertically */
-        gap: 20px; /* Reduces the gap for smaller devices */
-        align-items: center; /* Centers the cards vertically */
+        flex-direction: column; /* Stacks cards vertically */
+        gap: 15px;
     }
 
-    .honours-card img, 
-    .inspirer-card img {
-        width: 100%; /* Adjusts for smaller frames */
-        height: auto; /* Maintains aspect ratio */
+    /* Card Styles */
+    .honours-card, 
+    .inspirer-card {
+        width: 90%; /* Single card per row on smaller screens */
     }
 
-    .inspirer-card img {
-        width: 70px;
-        height: 70px;
+    /* Polaroid Image Border */
+    .polaroid-img {
+        border-width: 2px; /* Slightly thinner border */
     }
 }
