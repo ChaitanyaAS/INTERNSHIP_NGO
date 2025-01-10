@@ -106,7 +106,7 @@ nav ul li a.highlighted:hover::after {
 }
 .hero {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden; /* Prevent content overflow */
     background: #000; /* Fallback for black */
 }
@@ -123,8 +123,6 @@ nav ul li a.highlighted:hover::after {
     white-space: nowrap;
     z-index: 100;
 }
-
-
 
 .hero-slides {
     display: flex;
@@ -150,7 +148,7 @@ nav ul li a.highlighted:hover::after {
     100% { transform: translateX(-75%); }      /* Stay on Duplicate */
 }
 .hero .logo img {
-    width: 200px;
+    width: 300px;
     height: 200px;
     margin-top: 50px;
 }
@@ -305,7 +303,7 @@ nav ul li a.highlighted:hover::after {
 
 /* Contact Section */
 .contact-info {
-    padding: 50px;
+    padding: 30px;
     background: rgb(245, 176, 92);
     color: rgb(18, 15, 15);
     text-align: center;
@@ -320,8 +318,8 @@ nav ul li a.highlighted:hover::after {
     display: flex; /* Align items horizontally */
     flex-direction: column; /* Stack each contact row vertically */
     color: white;
-    max-width: 900px;
-    margin-left: 500px;
+    max-width: 9000px;
+    margin-left:550px;
     gap: 15px; /* Space between each contact row */
 }
 
@@ -377,6 +375,36 @@ nav ul li a.highlighted:hover::after {
     transform: scale(1.1);
     background-color: orange; /* Highlighted background on hover */
 }
+
+/* Footer Styling */
+footer {
+    background-color: #f8f8f8; /* Light background for footer */
+    padding: 20px;
+    position: relative; /* Set relative positioning for the footer */
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    border-top: 2px solid #ddd;
+}
+
+/* Codesphere image styling */
+footer .codesphere {
+    padding-top: 100px;
+    position: absolute; /* Absolute positioning to place it at the bottom right */
+    bottom: 10px; /* Adjust spacing from the bottom */
+    right: 10px; /* Adjust spacing from the right */
+    width: 150px; /* Set the size of the image */
+    height: 150px;
+}
+
+footer .codesphere img {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 100%; /* Ensure the image fits within the container */
+    height: 100%; /* Ensure the image fits within the container */
+    object-fit: contain; /* Preserve the aspect ratio of the image */
+}
+
 /* Media Queries for Mobile */
 @media (max-width: 815px) {
     /* Hero Section Adjustments */
