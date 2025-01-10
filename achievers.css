@@ -134,7 +134,7 @@ body {
     font-weight: bold;
     color: #f5f3f1;
     background-color: rgba(255, 165, 0, 0.9); /* Semi-transparent orange */
-    padding: 20px 400px; /* Matches Honours section padding */
+    padding: 40px 400px; /* Matches Honours section padding */
     display: inline-block;
     border-radius: 40px;
     text-align: right; /* Aligns text inside the h2 element */
