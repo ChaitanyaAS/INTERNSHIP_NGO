@@ -9,7 +9,7 @@ body {
   .main-header {
     background-color: #666565; /* Light grey */
     padding: 20px;
-    width: 100%;
+    
     box-shadow: 0 4px 6px rgba(246, 113, 47, 0.1);
   }
   
@@ -51,7 +51,7 @@ body {
     max-width: 400px;
     text-align: center;
     position: relative; /* Add this */
-    top: -45px; /* Move the box 20px upward */
+    top: -30px; /* Move the box 20px upward */
   }
   
   .donation-form input,
@@ -117,6 +117,41 @@ body {
     transform: scale(0.98);
   }
   
+	#dynamic-content {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 0.9em;
+  color: #413f3f;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+}
+
+#dynamic-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#dynamic-content table th,
+#dynamic-content table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#dynamic-content table th {
+  background-color: #666565;
+  color: #f5b22c;
+}
+
+#dynamic-content img {
+  display: block;
+  margin: 20px auto;
+  width: 80%; /* Ensures responsiveness */
+  max-width: 300px; /* Limits the maximum size */
+  height: auto;
+  border-radius: 8px;
+}
   /* Responsive Design */
   @media (max-width: 768px) {
     .main-header h1 {
@@ -126,6 +161,19 @@ body {
     .donation-form {
       width: 90%;
       padding: 20px;
+		top: -10px;
+	
     }
+	.main-header .logo-container{
+		flex-direction:column;
+		gap:10px;
+	  }
+	#dynamic-content {
+    font-size: 0.8em;
   }
-  
+
+  #dynamic-content img {
+    width: 90%; /* Adjust image width for smaller screens */
+  }
+	
+  }
