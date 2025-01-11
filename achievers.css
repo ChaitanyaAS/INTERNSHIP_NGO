@@ -109,8 +109,6 @@ h1, h2 {
 }
 
 /* Monthly Inspirers Section Styling */
-/* CSS for Inspirers Section */
-
 .inspirers {
     text-align: center;
     padding-bottom: 30px;
@@ -138,8 +136,8 @@ h1, h2 {
 }
 
 .inspirers-content {
-     display: flex;
-    justify-content: flex-end; /* Align content to the left */
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
     gap: 45px;
     flex-wrap: wrap;
     margin: 30px 0;
@@ -149,7 +147,7 @@ h1, h2 {
 
 .inspirer-card {
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    padding: 20px;
+    
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -169,35 +167,14 @@ h1, h2 {
     display: block;
 }
 
-.inspirer-card .name {
+.inspirer-card .name, .name {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
     margin-top: 10px;
 }
 
-.inspirer-card .role {
-    font-size: 1rem;
-    color: #ff9900; /* Yellow-orange color for the role */
-    margin-top: 5px;
-}
-
-
-/* Styling for Role */
-.inspirer-card .role {
-    font-size: 1rem;
-    color: #ffcc00; /* Yellow color for the role */
-    margin-top: 5px;
-}
-
-.name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #121111;
-}
-
-.role {
+.inspirer-card .role, .role {
     font-size: 1rem;
     color: #ffcc00; /* Yellow color for the role */
     margin-top: 5px;
@@ -219,11 +196,12 @@ h1, h2 {
     }
 
     .logo {
-        margin-top:-25px;
-        left:70%;
+        margin-top: -25px;
+        left: -50%;
     }
+
     .honours {
-        margin-top:150px;
+        margin-top: 150px;
     }
 
     /* Honours Section */
@@ -251,7 +229,7 @@ h1, h2 {
         gap: 20px; /* Moderate gap between cards */
         padding: 0 10px;
         flex-wrap: wrap;
-        margin-left:20px;
+        margin-left: 20px;
     }
 
     /* Card Styles */
@@ -287,15 +265,14 @@ h1, h2 {
         font-size: 0.9rem;
     }
 
-    .inspirer-card img {
-        width: 265px;
-        height: 250px;
-    }
-
+    .inspirer-card img,
     .honours-card img {
         width: 265px;
         height: 250px;
     }
+	.inspirer-card{
+		width:120% !important;
+	}
 }
 
 /* Responsive Design for Extra Small Devices */
