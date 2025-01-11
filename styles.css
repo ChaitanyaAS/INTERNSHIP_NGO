@@ -406,121 +406,164 @@ footer .codesphere img {
 }
 
 /* Media Queries for Mobile */
+/* Mobile View Adjustments for screens smaller than 815px */
 @media (max-width: 815px) {
     /* Hero Section Adjustments */
     .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        height: 400px; /* Adjust height for mobile screens */
-        max-width: 100%; /* Ensures the hero section stays within bounds */
-        overflow: hidden; /* Prevent any overflow outside the hero container */
-        position: relative; /* Ensures child elements are contained properly */
+        height: 30vh; /* Reduce height for mobile screens */
     }
+	.hero-slides{
+		width:400%;
+	}
+	.hero-slide{
+		height:30vh;
+		width:25%;
+	}
 
-    /* Paragraph within Hero Section */
     .hero p {
-        font-size: clamp(1rem, 4vw, 2.8rem); /* Dynamically adjusts font size */
-        margin: 0 auto;
-        text-align: center;
-        max-width: 90%; /* Ensures text doesn't go beyond the container */
-        word-wrap: break-word; /* Break long words */
-        line-height: 1.4; /* Ensure line spacing isn't too tight */
-        display: block; /* Ensures paragraph behaves as a block element */
-        position: relative; /* Ensure proper positioning */
-        z-index: 1;
-        margin-right: 10%;
-        top: 0; /* Ensure no unnecessary gap at the top */
-        text-wrap: balance; /* Ensure paragraph is on top in case of overlapping */
-        margin-top: 0; /* Ensure no top margin */
-    }
-
-    /* Hero Buttons */
-    .hero .buttons {
-        flex-direction: column;
-        
-    }
-
-    .buttons .btn {
-        margin: 10px 0;
-    }
-
-    .logo img {
-        top: 20px;
-        left: 50%;
+        font-size: 15px; /* Reduce text size */
+        left: 47%;  /* Center horizontally */
         transform: translateX(-50%);
+        margin-top: 50px;  /* Adjust positioning */
+    }
+	.hero .logo img {
+    width: 60px;
+    height: 40px;
+    margin-top: 50px;
+	}
+	.logo img {
+    position: absolute;
+    top:-50px;
+    left: 10px;
+	}
+	.hero .buttons{
+		display: block;
+		width: 100%;
+		margin-left:145px;
+		margin-top:13px;
+	}
+	.buttons .btn{
+		margin-left:20px;
+	}
+
+    .buttons {
+        left: 50%;
+        transform: translateX(-50%); /* Center the buttons */
+        top: 75%; /* Adjust button position */
     }
 
-    /* Navigation */
-    nav ul {
-        display: none;
+    /* Header and Navigation Menu Adjustments */
+    header {
+        padding: 10px 20px;
+        font-size: 1rem;
+		height:40px;
     }
-nav ul li{
-        margin-top: 10px;
+
+    nav ul {
+        display: none; /* Hide menu by default */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
     }
 
     nav ul.active {
-        display: flex;
+        display: flex; /* Show menu when active */
         flex-direction: column;
         gap: 10px;
         background: rgba(0, 0, 0, 0.8);
         position: absolute;
-        top: 40px;
+        top: 50px; /* Adjust menu positioning */
         right: 0;
-        padding: 20px;
         width: 250px;
+        padding: 20px;
     }
 
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        color: white;
-        font-size: 2rem;
+    nav ul li {
+        margin-top: 10px;
     }
 
-    .menu-toggle.active + nav ul {
-        display: flex;
+    /* About Section Adjustments */
+    .about-us {
+        padding: 30px 10px;
     }
 
-    /* Vision and Mission Section */
+    /* Vision and Mission Section Adjustments */
     .vision-mission {
         flex-direction: column;
         padding: 20px;
     }
 
     .image-container {
-        width: 100%;
+        width: 100%; /* Ensure image fits within screen */
         height: auto;
     }
 
-    /* Contact Info Section */
+    /* Contact Info Section Adjustments */
     .contact-info {
+        padding: 20px;
+    }
+
+    .contact-links {
         flex-direction: column;
-        padding: 30px;
+        align-items: center;
+        gap: 20px;
+		margin-left:5px;
+    }
+
+    .contact-links p {
+        font-size: 1rem;
+    }
+
+    /* Social Media Section Adjustments */
+    .social-media {
+    position: fixed;
+    top: 50%;
+    right: 10px; /* Ensures it's 10px from the right edge */
+    transform: translateY(-50%); /* Vertically center the icon list */
+    z-index: 1000; /* Ensures it stays above the background */
+    padding: 10px 0;
+    transition: right 0.3s ease; /* Optional: smooth transition on page load */
+}
+
+    .social-icons a img {
+        width: 45px;
+        height: 45px;
+    }
+
+}
+
+/* For smaller screens (313px and below), further tweaks */
+@media (max-width: 313px) {
+    .hero p {
+        font-size: 1.5rem; /* Smaller font size */
+        top: 30%; /* Adjust vertical position */
+    }
+
+    .buttons .btn {
+        padding: 8px 20px; /* Smaller button padding */
+        font-size: 1rem;
     }
 
     header {
-        height: 10px;
+        font-size: 0.9rem; /* Smaller font for navigation */
     }
 
     .logo img {
-        margin-top: 30px;
+        width: 80px; /* Smaller logo on very small screens */
+        height: auto;
+        left: 10px;  /* Adjust positioning */
     }
 
-    /* Adjusting margin-top dynamically based on screen size */
-    .hero p {
-        margin-top: 100px; /* Ensure there's no initial gap */
+    .menu-toggle {
+        font-size: 1.5rem; /* Slightly smaller toggle button */
     }
-}
 
-
-/* Additional Media Query for Screens Below 313px */
-@media (max-width: 313px) {
-    .hero p {
-        font-size: 1rem !important; /* Force font size for very small screens */
-        margin-top: 8rem; /* Smaller margin for very small screens */
+    nav ul.active {
+        width: 100%; /* Full width for ultra-small screens */
+        padding: 10px;
     }
 }
