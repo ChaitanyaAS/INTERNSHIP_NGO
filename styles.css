@@ -424,23 +424,23 @@ footer .codesphere img {
         font-size: 15px; /* Reduce text size */
         left: 47%;  /* Center horizontally */
         transform: translateX(-50%);
-        margin-top: 50px;  /* Adjust positioning */
+        margin-top: 40px;  /* Adjust positioning */
     }
 	.hero .logo img {
-    width: 60px;
-    height: 40px;
+    width: 90px;
+    height: 70px;
     margin-top: 50px;
 	}
 	.logo img {
     position: absolute;
-    top:-50px;
-    left: 10px;
+    top:20px;
+    left: 36%;
 	}
 	.hero .buttons{
 		display: block;
 		width: 100%;
 		margin-left:145px;
-		margin-top:13px;
+		margin-top:10px;
 	}
 	.buttons .btn{
 		margin-left:20px;
