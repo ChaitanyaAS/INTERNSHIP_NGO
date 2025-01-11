@@ -1,21 +1,21 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background: url("honour_bg.jpg") no-repeat center center fixed;
     background-size: cover; /* Ensures the image covers the entire viewport */
     color: white; /* Sets default text color for readability */
-    font-family: 'Times New Roman', Times, serif
 }
 
 .logo-container {
     position: absolute;
     top: 40px;
-    left: 190px;
+    left: 20px; /* Adjusted left space */
     width: 200px;
     height: auto;
     display: inline-block;
+    margin-left: 150px;
 }
 
 .logo {
@@ -25,15 +25,20 @@ body {
     width: 150px; /* Adjust the size of the logo */
     height: auto;
 }
-/* Adding background to the polaroid for contrast */
+
+/* Container Styling for Alignment */
+.container {
+    margin-left: 1000px; /* Adjust this value as needed to align with the green line */
+}
+
+/* Polaroid Card Styling */
 .polaroid {
+    margin: 15px; /* Spacing between images */
+    text-align: center;
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for contrast */
     padding: 1px 1px 15px; /* Extra padding at the bottom for space */
-    text-align: center;
-    margin: 4px;
 }
-
 
 .polaroid-img {
     width: 100px; /* Adjust the size for uniformity */
@@ -42,20 +47,10 @@ body {
     border: 5px solid rgb(249, 245, 245); /* Inner border around the image */
 }
 
-
-/* Section Styles */
-.honours-header, .inspirers-header {
+/* Header Styling */
+h1, h2 {
     text-align: center;
-    margin-bottom: 20px;
-    width: 100%; /* Ensures full width */
-    overflow: hidden; /* Hides any content that extends beyond the container */
-    box-sizing: border-box;
-}
-
-.honours-content, .inspirers-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center-align cards in the container */
+    margin: 20px 0;
 }
 
 /* Honours Section Styling */
@@ -73,7 +68,7 @@ body {
     display: inline-block;
     border-radius: 40px;
     text-align: right; /* Aligns text inside the h2 element */
-    margin-left: 580px; /* Pushes the element to the right */
+    margin-left: 600px; /* Pushes the element to the right */
     margin-right: 20px;
 }
 
@@ -81,18 +76,18 @@ body {
     font-size: 1.8rem;
     margin-top: 15px;
     font-weight: bold;
-    margin-left: 500px; 
-    font-family: 'Times New Roman', Times, serif
+    margin-left: 300px; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .honours-content {
     display: flex;
-    justify-content: flex-end;
-    gap: 100px;
+    justify-content: flex-start; /* Align content to the left */
+    gap: 45px;
     flex-wrap: wrap;
     margin: 30px 0;
-    margin-left: 80px;
-	margin-right: 10px;
+    margin-left: 350px; /* Adjusted for space */
+    margin-right: 10px;
 }
 
 .honours-card img {
@@ -113,50 +108,56 @@ body {
     margin-right: 100px;
 }
 
-/* Honours Section Name Styling */
-.honours .name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;  /* Ensure names are black */
-    display: block;
-    visibility: visible;
-    position: relative;
-    z-index: 1;
-}
 /* Monthly Inspirers Section Styling */
+/* CSS for Inspirers Section */
+
 .inspirers {
     text-align: center;
-    padding-bottom: 30px; /* Matches the padding with Honours section */
+    padding-bottom: 30px;
 }
 
 .inspirers-header h2 {
     font-size: 3rem;
     font-weight: bold;
-    color: #f5f3f1;
+    color: #f8f5f5;
     background-color: rgba(255, 165, 0, 0.9); /* Semi-transparent orange */
-    padding: 40px 400px; /* Matches Honours section padding */
+    padding: 40px 400px;
     display: inline-block;
     border-radius: 40px;
-    text-align: right; /* Aligns text inside the h2 element */
-    margin-left: 580px; /* Matches Honours section alignment */
-    margin-right: 40px;
+    text-align: right;
+    margin-left: 600px; /* Pushes the element to the right */
+    margin-right: 20px;
 }
 
 .inspirers-header p {
     font-size: 1.8rem;
     margin-top: 15px;
     font-weight: bold;
-    margin-left: 100px; /* Matches the Honours header description alignment */
+    margin-left: 300px; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .inspirers-content {
-    display: flex;
-    justify-content: flex-end; /* Matches Honours content alignment */
-    gap: 100px; /* Matches spacing between cards */
+     display: flex;
+    justify-content: flex-end; /* Align content to the left */
+    gap: 45px;
     flex-wrap: wrap;
-    margin: 50px 0;
-    margin-left: 50px; /* Matches Honours section alignment */
-	margin-right: 10px;
+    margin: 30px 0;
+    margin-left: 350px;     
+    margin-right: 90px;
+}
+
+.inspirer-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inspirer-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .inspirer-card img {
@@ -169,11 +170,18 @@ body {
 }
 
 .inspirer-card .name {
-    font-size: 1.2rem; /* Matches caption font size */
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #141414; /* Matches Honours section caption color */
+    color: #333;
     margin-top: 10px;
 }
+
+.inspirer-card .role {
+    font-size: 1rem;
+    color: #ff9900; /* Yellow-orange color for the role */
+    margin-top: 5px;
+}
+
 
 /* Styling for Role */
 .inspirer-card .role {
@@ -182,12 +190,11 @@ body {
     margin-top: 5px;
 }
 
-/* Styling for Name and Role */
 .name {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 10px;
-    color: #ffffff;
+    color: #121111;
 }
 
 .role {
@@ -198,8 +205,6 @@ body {
 
 /* Responsive Design */
 
-
-/* Responsive Design */
 /* Responsive Design for Tablets and Smaller Devices */
 @media (max-width: 768px) {
     body {
@@ -214,12 +219,12 @@ body {
     }
 
     .logo {
-		margin-top:-25px;
+        margin-top:-25px;
         left:70%;
     }
-	.honours{
-		margin-top:150px;
-	}
+    .honours {
+        margin-top:150px;
+    }
 
     /* Honours Section */
     .honours-header h2, 
@@ -246,7 +251,7 @@ body {
         gap: 20px; /* Moderate gap between cards */
         padding: 0 10px;
         flex-wrap: wrap;
-		margin-left:20px;
+        margin-left:20px;
     }
 
     /* Card Styles */
@@ -281,14 +286,16 @@ body {
     .role {
         font-size: 0.9rem;
     }
-	.inspirer-card img {
-		width: 265px;
-		height: 250px;
-	}
-	.honours-card img{
-		width: 265px;
-		height: 250px;
-	}
+
+    .inspirer-card img {
+        width: 265px;
+        height: 250px;
+    }
+
+    .honours-card img {
+        width: 265px;
+        height: 250px;
+    }
 }
 
 /* Responsive Design for Extra Small Devices */
@@ -305,14 +312,12 @@ body {
         gap: 15px;
     }
 
-    /* Card Styles */
     .honours-card, 
     .inspirer-card {
-        width: 90%; /* Single card per row on smaller screens */
+        width: 90%; /* Cards take full width */
     }
 
-    /* Polaroid Image Border */
-    .polaroid-img {
-        border-width: 2px; /* Slightly thinner border */
+    .polaroid {
+        width: 90%; /* Adjusts width for mobile */
     }
 }
