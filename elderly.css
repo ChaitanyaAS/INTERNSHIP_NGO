@@ -221,4 +221,9 @@ h1 {
     .project-content p {
         font-size: 14px;
     }
+	.content{
+		padding:5px;
+	}
+
+	
 }
