@@ -9,7 +9,7 @@ body {
     position: absolute;
     top: 90px; /* Adjust to the desired top position */
     left: 50px; /* Adjust to the desired left position */
-    width: 150px; /* Adjust the size of the logo */
+    width: 120px; /* Adjust size for better scaling */
     height: auto;
 }
 
@@ -23,7 +23,7 @@ body {
 
 h1 {
     margin: 0;
-    font-size: 4em;
+    font-size: 3rem;
     color: #f9f6f6;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -46,7 +46,7 @@ h1 {
     background-color: gray;
     color: white;
     text-align: center;
-    padding: 100px 30px;
+    padding: 80px 20px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -88,7 +88,7 @@ h1 {
     color: #d43f3a;
     margin-bottom: 10px;
     flex-basis: 100%;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -98,34 +98,28 @@ h1 {
     align-items: center;
     gap: 20px;
     position: relative;
+    flex-direction: column; /* Default to column for flexibility */
 }
 
 /* Image styles */
 .project-content img {
-    width: 480px;
-    height: calc(480px * 9 / 16);
+    width: 100%;
+    max-width: 480px;
+    height: auto;
     border-radius: 10px;
     flex-shrink: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 30px;
+    margin-bottom: 20px;
 }
-/* Project content layout */
-.project-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    position: relative; /* Added this for the correct positioning of the dotted line */
-}
-
 
 /* Text styles */
 .project-content p {
-    font-size: 20px;
+    font-size: 18px;
     color: #5c5249;
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 900;
-    margin-left: 20px;
+    margin: 0 10px;
 }
 
 /* Pop-up effect on hover */
@@ -153,4 +147,78 @@ h1 {
 
 .project:nth-child(even) .project-content {
     flex-direction: row-reverse; /* Image on the right and content on the left */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo {
+        top: 50px;
+        left: 20px;
+        width: 100px;
+    }
+
+    .header {
+        padding: 60px 20px;
+    }
+
+    .project {
+        flex-wrap: wrap;
+    }
+
+    .project-content {
+        flex-direction: column; /* Stack image and text */
+    }
+
+    .project-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project h2 {
+        font-size: 1.2rem;
+    }
+	.project:nth-child(odd) .project-content{
+		flex-direction: column;
+	}
+	.project:nth-child(even) .project-content{
+		flex-direction: column;
+	}
+
+    .project-content p {
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 40px 15px;
+		padding-top: 70px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 80px;
+        top: 30px;
+        left: 37%;
+    }
+
+    .project h2 {
+        font-size: 1rem;
+    }
+
+    .project-content p {
+        font-size: 14px;
+    }
 }
